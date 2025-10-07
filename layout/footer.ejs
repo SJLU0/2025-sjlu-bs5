@@ -1,19 +1,28 @@
 <!-- 有修改預設字體 -->
 <footer>
   <div
-    class="bg-primary-00 d-flex justify-content-between align-items-center py-3 border-top border-primary-900 border-2 fixed-bottom z-2"
+    class="footer bg-primary-00 d-flex justify-content-center py-3 gap-4 border-top border-primary-900 border-2 fixed-bottom z-2"
   >
-    <button
-      class="d-flex justify-content-around align-items-center border-0 bg-transparent p-0"
-    >
+    <button class="d-flex border-0 bg-transparent" id="toDownButton">
       <span class="material-symbols-outlined fs-2"> arrow_drop_down </span>
     </button>
-    <button
-      class="d-flex justify-content-around align-items-center border-0 bg-transparent p-0"
-    >
+    <button class="d-flex border-0 bg-transparent" id="toTopButton">
       <span class="material-symbols-outlined fs-2"> arrow_drop_up </span>
     </button>
   </div>
 </footer>
 
-<script></script>
+<script>
+  const toDownButton = document.getElementById("toDownButton");
+  const toTopButton = document.getElementById("toTopButton");
+
+  const scrollDistance = 200; // 每次滾動距離 px
+
+  toDownButton.addEventListener("click", () => {
+    window.scrollBy({ top: scrollDistance, behavior: "smooth" });
+  });
+
+  toTopButton.addEventListener("click", () => {
+    window.scrollBy({ top: -scrollDistance, behavior: "smooth" });
+  });
+</script>
