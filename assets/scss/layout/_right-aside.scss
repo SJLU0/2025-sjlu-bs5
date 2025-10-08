@@ -1,0 +1,13 @@
+// 引入 Courier Prime 字型
+@import url("https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+// 引入icon
+@import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined");
+
+.aside {
+  font-family: "Courier Prime", monospace;
+}
+
+.right-text {
+  transform: rotate(90deg);
+  white-space: nowrap; /* 換行 */
+}
