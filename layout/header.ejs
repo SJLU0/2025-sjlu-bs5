@@ -1,7 +1,7 @@
 <!-- 有修改預設字體 -->
 <header>
   <div
-    class="header bg-primary-00 d-flex justify-content-between align-items-center py-3 border-bottom border-primary-900 border-2 fixed-top z-2"
+    class="header bg-primary-00 d-flex justify-content-between align-items-center py-2 border-bottom border-primary-900 border-2 fixed-top z-2"
   >
     <div class="menu-time">
       <span class="fs-6 fst-italic fw-semibold m-0" id="time"> </span>
@@ -25,13 +25,13 @@
   function getCurrentTime() {
     const now = new Date(); //建立日期物件
     const y = now.getFullYear();
-    const m = String(now.getMonth() + 1).padStart(2, '0'); //不足兩位數就補 0
-    const d = String(now.getDate()).padStart(2, '0');
-    const h = String(now.getHours()).padStart(2, '0');
-    const min = String(now.getMinutes()).padStart(2, '0');
-    const s = String(now.getSeconds()).padStart(2, '0');
+    const m = String(now.getMonth() + 1).padStart(2, "0"); //不足兩位數就補 0
+    const d = String(now.getDate()).padStart(2, "0");
+    const h = String(now.getHours()).padStart(2, "0");
+    const min = String(now.getMinutes()).padStart(2, "0");
+    const s = String(now.getSeconds()).padStart(2, "0");
     document.getElementById(
-      'time'
+      "time"
     ).textContent = `Current Time: ${y}.${m}.${d} ${h}:${min}:${s}`;
   }
   getCurrentTime();

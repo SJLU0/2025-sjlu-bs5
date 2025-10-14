@@ -299,7 +299,9 @@ $cyans: (
 
 // scss-docs-start theme-color-variables
 $primary: $blue !default;
-$primary-00: #ffffc8; //之後要自改預設：淺黃色 #fffff0
+$primary-00: #fffff0; //淺黃色
+$primary-100: #ffffc8; //測試色
+$primary-700: #666666; //深灰色
 $primary-900: #000000; //黑色
 $secondary: $gray-600 !default;
 $success: $green !default;
@@ -322,6 +324,8 @@ $theme-colors: (
   "light": $light,
   "dark": $dark,
   "primary-00": $primary-00,
+  "primary-100": $primary-100,
+  "primary-700": $primary-700,
   "primary-900": $primary-900,
   //自改淺黃色
 ) !default;
@@ -422,9 +426,19 @@ $spacers: (
   0: 0,
   1: $spacer * 0.25,
   2: $spacer * 0.5,
-  3: $spacer,
-  4: $spacer * 1.5,
-  5: $spacer * 3,
+  3: $spacer * 0.75,
+  4: $spacer * 1,
+  5: $spacer * 1.25,
+  6: $spacer * 1.5,
+  7: $spacer * 1.75,
+  8: $spacer * 2,
+  9: $spacer * 2.25,
+  10: $spacer * 2.5,
+  60: $spacer * 3.75,
+  80: $spacer * 5,
+  100: $spacer * 6.25,
+  120: $spacer * 7.5,
+  160: $spacer * 10,
 ) !default;
 // scss-docs-end spacer-variables-maps
 
@@ -509,11 +523,11 @@ $grid-breakpoints: (
 
 // scss-docs-start container-max-widths
 $container-max-widths: (
-  sm: 540px,
-  md: 720px,
-  lg: 960px,
-  xl: 1140px,
-  xxl: 1320px,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px,
 ) !default;
 // scss-docs-end container-max-widths
 
@@ -639,6 +653,7 @@ $line-height-base: 1.5 !default;
 $line-height-sm: 1.25 !default;
 $line-height-lg: 2 !default;
 
+$h0-font-size: $font-size-base * 3 !default; //追加 48
 $h1-font-size: $font-size-base * 2.5 !default;
 $h2-font-size: $font-size-base * 2 !default;
 $h3-font-size: $font-size-base * 1.75 !default;
@@ -650,6 +665,7 @@ $h7-font-size: $font-size-base * 0.875 !default; //追加
 
 // scss-docs-start font-sizes
 $font-sizes: (
+  0: $h0-font-size,
   1: $h1-font-size,
   2: $h2-font-size,
   3: $h3-font-size,

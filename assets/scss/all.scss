@@ -1,8 +1,12 @@
 @import "../../node_modules/bootstrap/scss/functions";
-@import './utils/variables';
+@import "./utils/variables";
 @import "../../node_modules/bootstrap";
 
-@import './layout/header.scss';
-@import './layout/footer.scss';
+@import "./layout/header.scss";
+@import "./layout/footer.scss";
+@import "./layout/left-aside.scss";
+@import "./layout/right-aside.scss";
 
-@import './pages/index.scss';
+@import "./pages/index.scss";
+@import "./pages/about.scss";
+@import "./pages/contact.scss";
