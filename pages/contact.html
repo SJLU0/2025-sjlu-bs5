@@ -1,0 +1,71 @@
+<!-- 寫固定導覽列 -->
+<!DOCTYPE html>
+<html lang="zh-TW">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>固定左側邊欄（Bootstrap 原生版本）</title>
+
+    <style>
+      /* 僅保留一行：讓主內容避開側邊欄寬度 */
+      .content {
+        margin-left: 30px;
+        margin-right: 30px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <div
+        class="position-fixed border-2 border-primary-900 border-bottom w-100 bg-primary-100 z-2"
+      >
+        <p>這是header</p>
+      </div>
+    </header>
+    <aside
+      class="position-fixed top-0 bottom-0 start-0 d-flex justify-content-center align-items-center vh-100 border-2 border-primary-900 border-end p-3 z-1 bg-primary-100"
+      style="width: 40px"
+    >
+      <p style="white-space: nowrap; transform: rotate(-90deg)">
+        Visit Duration:
+      </p>
+    </aside>
+    <!-- 佔位，避免被header遮住 -->
+    <div style="height: 40px"></div>
+    <!-- 主內容區 -->
+    <main class="content">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-lg-12 mx-auto">
+            <section></section>
+            <section class="section">
+              <h1>中間主內容</h1>
+              <p>中間內容可以正常捲動，左右側邊欄會固定不動。</p>
+              <div style="height: 2000px; background: coral">模擬長內容</div>
+            </section>
+          </div>
+        </div>
+      </div>
+    </main>
+    <!-- 佔位，避免被footer遮住 -->
+    <div style="height: 40px"></div>
+    <aside
+      class="position-fixed top-0 bottom-0 end-0 d-flex justify-content-center align-items-center vh-100 border-2 border-primary-900 border-start p-3 z-1 bg-primary-100"
+      style="width: 40px"
+    >
+      <p style="white-space: nowrap; transform: rotate(90deg)">
+        © S.J.LU 2025 - All works original. All rights reserved
+      </p>
+    </aside>
+    <footer>
+      <div
+        class="position-fixed bottom-0 border-2 border-primary-900 border-top w-100 bg-primary-100 z-2"
+      >
+        <p>這是footer</p>
+      </div>
+    </footer>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
